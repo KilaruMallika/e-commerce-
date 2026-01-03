@@ -21,7 +21,7 @@ if (isset($_POST['register'])) {
 
         // After registration, log the user in and redirect
         $_SESSION['user_id'] = $conn->lastInsertId();
-        header("Location: " . ($role == 'admin' ? "dashboard.php" : "../index.php"));
+        header("Location: " . ($role == 'admin' ? "../admin/dashboard.php" : "../index.php"));
         exit();
     }
 }
